@@ -8,7 +8,8 @@ export const SiteHeader = () => {
     <header className="
   bg-background text-foreground shadow-md
   w-full p-4 z-50
-  flex items-center justify-around sticky top-0 
+  flex items-center justify-around
+  sticky top-0 
 ">
       <div>
         <Link href="/">

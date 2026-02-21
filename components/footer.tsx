@@ -3,7 +3,12 @@ import Image from 'next/image'
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-footerBg text-footerFg flex justify-around text-center p-10">
+    <footer
+      className="
+      bg-background text-foreground
+      p-10
+      flex justify-around text-center
+    ">
       <div className="p-2 text-left w-lg space-y-1">
         <h2>Sample site</h2>
         <p>Company site</p>

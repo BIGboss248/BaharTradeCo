@@ -7,7 +7,7 @@ export default function SiteFooter() {
   return (
     <footer className="bg-background text-foreground border-t border-border mt-auto">
       <div className="container mx-auto px-6 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
           {/* Brand / About Column */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
@@ -60,34 +60,22 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          {/* Products/Services */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-bold text-primary">Products</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/products/structural-steel" className="hover:text-primary transition-colors">Structural Steel</Link></li>
-              <li><Link href="/products/plates-sheets" className="hover:text-primary transition-colors">Plates & Sheets</Link></li>
-              <li><Link href="/products/pipes-tubes" className="hover:text-primary transition-colors">Pipes & Tubes</Link></li>
-              <li><Link href="/products/custom-fabrication" className="hover:text-primary transition-colors">Custom Fabrication</Link></li>
-              <li><Link href="/products/sustainable-steel" className="hover:text-primary transition-colors">Sustainable Steel</Link></li>
-            </ul>
-          </div>
-
           {/* Contact */}
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-primary">Contact</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span>📍</span>
-                <span>Main Office: [Your Address], [City], [Country]</span>
+                <span>Main Office: Shariati Street Chehelsotoon building, Isfahan, IRAN</span>
               </li>
               <li className="flex items-start gap-3">
-                <span>✆</span>
-                <span>+123 456 7890</span>
+                <span>📞</span>
+                <span>+98 456 7890</span>
               </li>
               <li className="flex items-start gap-3">
-                <span>✉</span>
-                <Link href="mailto:info@behartaktak.com" className="hover:text-primary transition-colors">
-                  info@behartaktak.com
+                <span>📧</span>
+                <Link href="mailto:info@bahartrade.com" className="hover:text-primary transition-all">
+                  info@bahartrade.com
                 </Link>
               </li>
               <li><Link href="/contact-us" className="hover:text-primary transition-colors">Get in Touch →</Link></li>
@@ -98,7 +86,7 @@ export default function SiteFooter() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
           <p>
-            © {new Date().getFullYear()} Behar Tak Tak Trading Company. All rights reserved.
+            © {new Date().getFullYear()} Bahar tejarat partak company. All rights reserved.
           </p>
           <div className="mt-2 flex justify-center gap-6">
             <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>

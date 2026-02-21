@@ -1,39 +1,112 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { cn } from '@/lib/utils'; // shadcn cn helper (optional but recommended)
 
 export default function SiteFooter() {
   return (
-    <footer
-      className="
-      bg-background text-foreground
-      p-10
-      flex justify-around text-center
-    ">
-      <div className="p-2 text-left w-lg space-y-1">
-        <h2>Sample site</h2>
-        <p>Company site</p>
-        <br />
-        <p>Find your way across the world</p>
-        <div className="flex flex-row justify-items-end space-x-7">
-          <div>
-            <Link href="https://instagram.com">
-              <Image src="Instagram_Glyph_Gradient.svg" alt="Icon of instagram" width={30} height={30}></Image>
+    <footer className="bg-background text-foreground border-t border-border mt-auto">
+      <div className="container mx-auto px-6 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-12">
+          {/* Brand / About Column */}
+          <div className="space-y-6">
+            <Link href="/" className="inline-block">
+              <Image
+                src="/BTP_Logo.png"
+                alt="Behar Tak Tak Trading Company - Premium Steel & Iron Ore"
+                width={160}
+                height={88}
+                className="h-14 w-auto object-contain brightness-110 contrast-125 transition-transform hover:scale-105 duration-300"
+              />
             </Link>
+
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+              Premium steel solutions engineered for strength and sustainability. Serving global construction, infrastructure, energy, and heavy industry since 1998.
+            </p>
+
+            <div className="flex items-center gap-5">
+              {/* Replace with your actual social icon SVGs or use lucide-react icons */}
+              <Link href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors">
+                  {/* Instagram icon - use your SVG or heroicons/lucide */}
+                  <span className="text-primary text-xl"> insta </span>
+                </div>
+              </Link>
+
+              <Link href="https://linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors">
+                  <span className="text-primary text-xl"> in </span>
+                </div>
+              </Link>
+
+              <Link href="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors">
+                  <span className="text-primary text-xl"> yt </span>
+                </div>
+              </Link>
+
+              {/* Add more as needed */}
+            </div>
           </div>
-          <div>Logo2</div>
-          <div>Logo3</div>
-          <div>Logo4</div>
-          <div>Logo5</div>
+
+          {/* Quick Links */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-bold text-primary">Company</h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/history" className="hover:text-primary transition-colors">Our History</Link></li>
+              <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
+              <li><Link href="/certifications" className="hover:text-primary transition-colors">Certifications</Link></li>
+            </ul>
+          </div>
+
+          {/* Products/Services */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-bold text-primary">Products</h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li><Link href="/products/structural-steel" className="hover:text-primary transition-colors">Structural Steel</Link></li>
+              <li><Link href="/products/plates-sheets" className="hover:text-primary transition-colors">Plates & Sheets</Link></li>
+              <li><Link href="/products/pipes-tubes" className="hover:text-primary transition-colors">Pipes & Tubes</Link></li>
+              <li><Link href="/products/custom-fabrication" className="hover:text-primary transition-colors">Custom Fabrication</Link></li>
+              <li><Link href="/products/sustainable-steel" className="hover:text-primary transition-colors">Sustainable Steel</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-bold text-primary">Contact</h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-3">
+                <span>📍</span>
+                <span>Main Office: [Your Address], [City], [Country]</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span>✆</span>
+                <span>+123 456 7890</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span>✉</span>
+                <Link href="mailto:info@behartaktak.com" className="hover:text-primary transition-colors">
+                  info@behartaktak.com
+                </Link>
+              </li>
+              <li><Link href="/contact-us" className="hover:text-primary transition-colors">Get in Touch →</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+          <p>
+            © {new Date().getFullYear()} Behar Tak Tak Trading Company. All rights reserved.
+          </p>
+          <div className="mt-2 flex justify-center gap-6">
+            <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/sitemap" className="hover:text-primary transition-colors">Sitemap</Link>
+          </div>
         </div>
       </div>
-      <div className="p-2">
-        section1
-      </div>
-      <div className="p-2">
-        section1
-      </div>
     </footer>
-
-  )
+  );
 }

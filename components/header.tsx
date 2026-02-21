@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import ThemeButton from './theme-toggle-btn'
+import ThemeDropDownButton from './theme-toggle-btn'
 
 export const SiteHeader = () => {
   return (
@@ -28,7 +28,7 @@ export const SiteHeader = () => {
           <Link href="/about">About</Link>
           <Link href="/contact-us">Contact us</Link>
         </nav>
-        <ThemeButton />
+        <ThemeDropDownButton />
       </div>
     </header>
   )

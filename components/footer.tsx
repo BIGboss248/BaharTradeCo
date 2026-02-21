@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function SiteFooter() {
   return (
@@ -16,9 +17,9 @@ export default function SiteFooter() {
         <p>Find your way across the world</p>
         <div className="flex flex-row justify-items-end space-x-7">
           <div>
-            <a href="https://instagram.com">
+            <Link href="https://instagram.com">
               <Image src="Instagram_Glyph_Gradient.svg" alt="Icon of instagram" width={30} height={30}></Image>
-            </a>
+            </Link>
           </div>
           <div>Logo2</div>
           <div>Logo3</div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { cn } from '@/lib/utils'; // shadcn cn helper (optional but recommended)
 
 export default function SiteFooter() {
   return (

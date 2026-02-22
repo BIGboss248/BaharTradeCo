@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/lib/utils'; // assuming you have shadcn cn helper
 import ThemeDropDownButton from './theme-toggle-btn';
+import { aboutPath, contactPath, homePath } from './path-list';
 
 export const SiteHeader = () => {
   return (
@@ -21,7 +22,7 @@ export const SiteHeader = () => {
         <div className="flex h-16 sm:h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="block">
+            <Link href={homePath} className="block">
               <Image
                 src="/BTP_Logo.png"
                 alt="Behar Tak Tak Trading Company - Premium Steel & Iron Ore"
@@ -38,9 +39,9 @@ export const SiteHeader = () => {
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-7 lg:gap-9">
               {[
-                { href: '/', label: 'Home' },
-                { href: '/about', label: 'About' },
-                { href: '/contact', label: 'Contact' },
+                { href: homePath, label: 'Home' },
+                { href: aboutPath, label: 'About' },
+                { href: contactPath, label: 'Contact' },
                 // Add more pages if needed, e.g. /products, /projects
               ].map((item) => (
                 <Link

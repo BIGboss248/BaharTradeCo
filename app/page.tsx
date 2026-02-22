@@ -1,3 +1,4 @@
+import { contactPath } from "@/components/path-list";
 import Link from "next/link";
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-5">
               <Link
-                href="/contact"
+                href={contactPath}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-5 rounded-lg text-lg font-bold transition shadow-lg"
               >
                 Request a Quote
@@ -173,7 +174,7 @@ export default function Home() {
           </p>
 
           <Link
-            href="/contact"
+            href={contactPath}
             className="inline-block bg-background text-foreground hover:bg-muted px-12 py-6 rounded-lg text-2xl font-bold shadow-2xl transition"
           >
             Get in Touch Today

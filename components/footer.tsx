@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { aboutPath, contactPath, homePath } from './path-list';
 
 export default function SiteFooter() {
   return (
@@ -9,7 +10,7 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
           {/* Brand / About Column */}
           <div className="space-y-6">
-            <Link href="/" className="inline-block">
+            <Link href={homePath} className="inline-block">
               <Image
                 src="/BTP_Logo.png"
                 alt="Behar Tak Tak Trading Company - Premium Steel & Iron Ore"
@@ -50,7 +51,7 @@ export default function SiteFooter() {
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-primary">Company</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href={aboutPath} className="hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/history" className="hover:text-primary transition-colors">Our History</Link></li>
               <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
               <li><Link href="/certifications" className="hover:text-primary transition-colors">Certifications</Link></li>
@@ -78,7 +79,7 @@ export default function SiteFooter() {
                   info@bahartrade.com
                 </Link>
               </li>
-              <li><Link href="/contact-us" className="hover:text-primary transition-colors">Get in Touch →</Link></li>
+              <li><Link href={contactPath} className="hover:text-primary transition-colors">Get in Touch →</Link></li>
             </ul>
           </div>
         </div>

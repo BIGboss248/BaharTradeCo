@@ -70,7 +70,10 @@ export default function SiteFooter() {
               </li>
               <li className="flex items-start gap-3">
                 <span>📞</span>
-                <span>+98 456 7890</span>
+                <Link href="tel:+984567890" className="sm:hidden hover:text-primary transition-all">
+                  +98 456 7890
+                </Link>
+                <span className="hidden sm:inline hover:text-primary transition-all">+98 456 7890</span>
               </li>
               <li className="flex items-start gap-3">
                 <span>📧</span>

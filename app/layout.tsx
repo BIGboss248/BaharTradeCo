@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import SiteFooter from "@/components/footer";
 import { SiteHeader } from "@/components/header";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
         >
           <SiteHeader />
           {children}
+          <SpeedInsights />
           <SiteFooter />
         </ThemeProvider>
       </body>

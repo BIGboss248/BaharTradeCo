@@ -27,7 +27,7 @@ export default function SiteFooter() {
             <div className="flex items-center gap-5">
               {/* Replace with your actual social icon SVGs or use lucide-react icons */}
               <Link href="https://www.instagram.com/bahartradeco" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors">
+                <div className="w-8 h-8 rounded-full bg-primary/80 flex items-center justify-center hover:bg-primary/20 hover:border-2 border-foreground transition-colors">
                   {/* Instagram icon - use your SVG or heroicons/lucide */}
                   <Image src="Instagram_Glyph_White.svg" alt="Instagram" width={16} height={16} className="text-primary" />
                 </div>
@@ -36,7 +36,7 @@ export default function SiteFooter() {
               <div className="flex items-center gap-5">
                 {/* Replace with your actual social icon SVGs or use lucide-react icons */}
                 <Link href="https://wa.me/+983136284259" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-primary/80 flex items-center justify-center hover:bg-primary/20 hover:border-2 border-foreground transition-colors">
                     {/* Instagram icon - use your SVG or heroicons/lucide */}
                     <Image src="Digital_Glyph_White.svg" alt="Whatsapp" width={16} height={16} className="text-primary" />
                   </div>

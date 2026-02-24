@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/lib/utils'; // assuming you have shadcn cn helper
-import ThemeDropDownButton from './theme-toggle-btn';
+import ThemeDropDownButton, { ThemeToggleButton } from './theme-toggle-btn';
 import { aboutPath, contactPath, homePath } from './path-list';
 
 export const SiteHeader = () => {
@@ -59,7 +59,7 @@ export const SiteHeader = () => {
             </nav>
 
             {/* Theme Toggle */}
-            <ThemeDropDownButton />
+            <ThemeToggleButton />
 
             {/* Optional: Mobile menu button (add logic later if needed) */}
             {/* <button className="md:hidden text-foreground p-2">

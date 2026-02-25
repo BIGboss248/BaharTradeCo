@@ -3,6 +3,7 @@
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 
+//TODO add smooth animation for theme change to prevent flash
 export function ThemeProvider({
   children,
   ...props

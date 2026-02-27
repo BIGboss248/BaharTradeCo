@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { aboutPath, contactPath, homePath } from '../lib/path-list';
-import { Email, EmailLink, instagramLink, Tel, TelLink, whatsAppLink } from '@/lib/contact-info';
+import { Email, EmailLink, googleMapsLink, instagramLink, Tel, TelLink, whatsAppLink } from '@/lib/contact-info';
 
 export default function SiteFooter() {
   return (
@@ -65,7 +65,8 @@ export default function SiteFooter() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span>📍</span>
-                <span>Main Office: Shariati Street Chehelsotoon building, Isfahan, IRAN</span>
+                <Link href={googleMapsLink} className='hover:text-primary transition-colors'>Main Office: Shariati Street Chehelsotoon building, Isfahan, IRAN</Link>
+                <span></span>
               </li>
               <li className="flex items-start gap-3">
                 <span>📞</span>

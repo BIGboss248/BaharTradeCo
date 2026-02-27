@@ -211,7 +211,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-black mb-8">Find Us on the Map</h2>
           <div className="bg-muted h-96 rounded-xl flex items-center justify-center text-2xl text-muted-foreground border border-border">
             {/* Replace with real Google Maps / Leaflet embed */}
-            Interactive World Map or Headquarters Location (Embed iframe here)
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d420.02671689707813!2d51.66308579539633!3d32.62713118217338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snl!4v1772194356700!5m2!1sen!2snl" className="w-full h-full rounded-lg" title="Google Maps" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <p className="mt-6 text-muted-foreground">
             Multiple mill and service center locations worldwide — contact us for the nearest facility.

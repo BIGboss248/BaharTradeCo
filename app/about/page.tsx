@@ -1,5 +1,5 @@
 // app/about/page.tsx
-import { contactPath } from "@/components/path-list";
+import { contactPath } from "@/lib/path-list";
 import Link from "next/link";
 
 export default function About() {

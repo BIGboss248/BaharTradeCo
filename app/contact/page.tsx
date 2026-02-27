@@ -1,5 +1,5 @@
 // app/contact/page.tsx
-import { contactPath } from "@/components/path-list"; // optional if you want to link back
+import { contactPath } from "@/lib/path-list"; // optional if you want to link back
 import Link from "next/link";
 
 export default function Contact() {

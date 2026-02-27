@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { aboutPath, contactPath, homePath } from './path-list';
+import { aboutPath, contactPath, homePath } from '../lib/path-list';
 
 export default function SiteFooter() {
   return (

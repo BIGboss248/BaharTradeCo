@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/lib/utils'; // assuming you have shadcn cn helper
-import ThemeDropDownButton, { ThemeToggleButton } from './theme-toggle-btn';
+import { ThemeToggleButton } from './theme-toggle-btn';
 import { aboutPath, contactPath, homePath } from '../lib/path-list';
 
 export const SiteHeader = () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { aboutPath, contactPath, homePath } from '../lib/path-list';
+import { Email, EmailLink, instagramLink, Tel, TelLink, whatsAppLink } from '@/lib/contact-info';
 
 export default function SiteFooter() {
   return (
@@ -26,7 +27,7 @@ export default function SiteFooter() {
 
             <div className="flex items-center gap-5">
               {/* Replace with your actual social icon SVGs or use lucide-react icons */}
-              <Link href="https://www.instagram.com/bahartradeco" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Link href={instagramLink} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <div className="w-8 h-8 rounded-full bg-primary/80 flex items-center justify-center hover:bg-primary/20 hover:border-2 border-foreground transition-colors">
                   {/* Instagram icon - use your SVG or heroicons/lucide */}
                   <Image src="Instagram_Glyph_White.svg" alt="Instagram" width={16} height={16} className="text-primary" />
@@ -35,7 +36,7 @@ export default function SiteFooter() {
 
               <div className="flex items-center gap-5">
                 {/* Replace with your actual social icon SVGs or use lucide-react icons */}
-                <Link href="https://wa.me/+983136284259" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+                <Link href={whatsAppLink} target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
                   <div className="w-8 h-8 rounded-full bg-primary/80 flex items-center justify-center hover:bg-primary/20 hover:border-2 border-foreground transition-colors">
                     {/* Instagram icon - use your SVG or heroicons/lucide */}
                     <Image src="Digital_Glyph_White.svg" alt="Whatsapp" width={16} height={16} className="text-primary" />
@@ -68,15 +69,15 @@ export default function SiteFooter() {
               </li>
               <li className="flex items-start gap-3">
                 <span>📞</span>
-                <Link href="tel:+984567890" className="sm:hidden hover:text-primary transition-all">
-                  +98 456 7890
+                <Link href={TelLink} className="sm:hidden hover:text-primary transition-all">
+                  {Tel}
                 </Link>
-                <span className="hidden sm:inline hover:text-primary transition-all">+98 456 7890</span>
+                <span className="hidden sm:inline hover:text-primary transition-all">{Tel}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span>📧</span>
-                <Link href="mailto:info@bahartrade.com" className="hover:text-primary transition-all">
-                  info@bahartrade.com
+                <Link href={EmailLink} className="hover:text-primary transition-all">
+                  {Email}
                 </Link>
               </li>
               <li><Link href={contactPath} className="hover:text-primary transition-colors">Get in Touch →</Link></li>
